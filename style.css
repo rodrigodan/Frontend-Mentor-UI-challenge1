@@ -1,0 +1,85 @@
+body{
+    margin:0;
+    font-size: 18px;
+    font-family:"Open", "Sans";
+    font-weight: 400;
+}
+
+h1,h2,h3{
+    font-weight: 600;
+    font-family: "Poppins";
+}
+
+@media (min-width: 375px) and (max-width: 1440px){
+    header{
+        background-color: rgb(235, 251, 255);
+        background-image:url("images/bg-hero-desktop.svg");
+    }
+}
+
+@media(max-width: 375px){
+    header{
+        background-color: rgb(235, 251, 255);
+        background-image:url("images/bg-hero-mobile.svg");
+    }
+}
+
+header, main,footer{
+    padding-left:50px;
+    padding-right:50px;
+}
+
+header{
+    padding-top:50px;
+}
+
+header>nav, header>article{
+    display: grid;
+}
+
+nav span{
+    grid-area: 1/85;
+
+}
+
+.bottom{
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 1.5px 2px 5px #aaaaaa;
+    font-weight:700;
+}
+
+header>article{
+    margin-top:80px;
+    grid-column-gap:40px;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+header>article>img{
+    grid-area: 1/3 / span 5/ span 6; 
+    width:600px;
+}
+
+header>article>h1{
+
+    grid-area: 2/1;
+}
+
+header>article>p{
+
+    grid-area: 3/1 / span 1 / span 2;
+
+}
+
+header>article>button{
+    grid-area: 4/1 / span 1 / span 1;
+    background-color:rgb(255, 82, 191) !important;
+    color:white;
+    border-radius: 24px !important;
+}
+
