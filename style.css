@@ -1,11 +1,104 @@
 body{
     margin:0;
+    padding: 0;
     font-size: 18px;
-    font-family:"Open", "Sans";
+    font-family:'Open Sans';
     font-weight: 400;
 }
 
-h1,h2,h3{
+h1,h2,h3,h4{
+    font-weight:600;
+    font-family: 'Poppins';
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav img{
+    margin-right:auto;
+    cursor: pointer;
+    width:160px;
+}
+
+button{
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+nav button{
+    background-color:white;
+    text-decoration:none;
+    padding: 10px 40px; 
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.19);
+}
+
+header{
+    background-color: rgb(235, 251, 255);
+    background-repeat: no-repeat;
+    color: rgb(0, 37, 46);
+    padding: 30px 60px;
+}
+
+header > article > button{
+    background-color: rgb(255, 82, 191);
+    color:white;
+    font-weight:bold;
+}
+
+header > article{
+    display:grid;
+}
+
+/* @media (min-width: 768px) and (max-width: 1440px){ */
+
+@media(max-width: 768px){
+
+    header{
+        background-image:url("images/bg-hero-mobile.svg");
+    }
+
+    header > article{
+        position:relative;
+        top:35px;
+        text-align: center;
+    }
+
+    header > article > p{
+        padding-left:110px;
+        padding-right:110px;
+    } 
+
+    header > article > img{
+        width:100%;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    header > article > button{
+        margin-left: 150px;
+        margin-right: 150px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+}
+
+
+@media (min-width: 768px){
+    header{
+        background-image: url('images/bg-hero-desktop.svg');
+    }
+    header > article {
+       grid-template-columns: repeat(2,1fr); 
+    }
+}
+
+
+/* h1,h2,h3{
     font-weight: 600;
     font-family: "Poppins";
 }
@@ -82,4 +175,4 @@ header>article>button{
     color:white;
     border-radius: 24px !important;
 }
-
+ */
